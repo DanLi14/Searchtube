@@ -11,15 +11,14 @@ const useVideos = (defaultSearchTerm) => {
 
   useEffect(() => {
     search(defaultSearchTerm);
-  }, []);
+  }, [defaultSearchTerm]);
 
   const search = async (term) => {
     const res = await youtube.get('/search', {
       params: { q: term },
     });
+    setVideos(res.data.items);
   };
-
-  setVideos(res.data.items);
 
   return [videos, search];
 };
