@@ -5,26 +5,14 @@ import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
 
 const App = () => {
-  const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
 
-  useEffect(() => {
-    onSearchSubmit('zepla hq');
-  }, []);
 
-  const onSearchSubmit = async (term) => {
-    const res = await youtube.get('/search', {
-      params: { q: term },
-    });
-
-    setVideos(res.data.items);
-    setSelectedVideo(res.data.items[0]);
-  };
 
   // const onVideoSelect = (video) => {
   //   setSelectedVideo(video);
-  // }; 
-  //The above can be refactored into setSelectedVideo - rule when you are passing one and the same argument into a function. 
+  // };
+  //The above can be refactored into setSelectedVideo - rule when you are passing one and the same argument into a function.
 
   return (
     <div className="ui container">
