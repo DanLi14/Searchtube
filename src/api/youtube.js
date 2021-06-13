@@ -1,9 +1,7 @@
 import axios from 'axios';
 
-const {REACT_APP_YOUTUBE_API_KEY} = process.env 
+// const {REACT_APP_YOUTUBE_API_KEY} = process.env 
 
-
-// const KEY = 'AIzaSyAhx0FOXoYFuLHdFgbdHL_xRDIBGezlOss';
 const KEY = `${REACT_APP_YOUTUBE_API_KEY}`;
 
 export default axios.create({
