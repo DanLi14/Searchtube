@@ -3,14 +3,15 @@ import SearchBar from './SearchBar';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
 import useVideos from '../hooks/useVideos';
+import Footer from './Footer';
 
 const App = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [videos, search] = useVideos('zepla HQ');
 
   useEffect(() => {
-    setSelectedVideo(videos[0])
-  }, [videos])
+    setSelectedVideo(videos[0]);
+  }, [videos]);
 
   // const onVideoSelect = (video) => {
   //   setSelectedVideo(video);
@@ -30,6 +31,7 @@ const App = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
