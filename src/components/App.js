@@ -5,6 +5,8 @@ import VideoDetail from './VideoDetail';
 import useVideos from '../hooks/useVideos';
 import Footer from './Footer';
 
+// const {REACT_APP_YOUTUBE_API_KEY} = process.env 
+
 const App = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [videos, search] = useVideos('zepla HQ');
